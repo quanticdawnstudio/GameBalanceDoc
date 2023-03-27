@@ -27,4 +27,5 @@
  -   For the perfect operation of GameBalance, it is necessary to pay attention to some steps. Follow each step carefully to be able to use GameBalance effectively.
  
   ### * 2.1 Creating and setting up the spreadsheet:<a name="passo1.1"></a>
-  -   Within the root of your project, create a folder named **DATA** and within it create an **Excel** file spreadsheet.
+  -   Within the root of your project, create a folder named  **`Data`** and within it create an **`Excel`** file spreadsheet.
+  ![sdasd](https://drive.google.com/file/d/1WPufXj6tiPD6lcxB_yNA2WubarT19wpp/view?usp=share_link)
