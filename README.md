@@ -155,6 +155,7 @@ It's important to keep the table consistent and organized, with clear labels for
   3. If a variable has a custom **`setter`** or **`getter`**, it will not be modified by the Game Balance Component.
   4. The **`variables that are modified`** by the Game Balance Component must have the same name as the property in the .csv file.
   5. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
+  6. Cannot change a **float value** if it is created in **Blueprint**.
   
   
  </blockquote>
