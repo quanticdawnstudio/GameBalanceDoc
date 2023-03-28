@@ -107,6 +107,13 @@ It's important to keep the table consistent and organized, with clear labels for
   </blockquote>
   
    ### * 3.2. Adding the Game Balance Component in C++: 
+	
+  - Before anything else, we need to add the GameBalance to the list of modules inside the **`.Build.cs`** file of your project.
+  <blockquote>
+  
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/build.jpg)
+  </blockquote>
+	
     
   - Write the following code in your actor's **.header**:
   <blockquote> 
