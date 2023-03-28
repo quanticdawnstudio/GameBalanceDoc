@@ -92,3 +92,32 @@ It's important to keep the table consistent and organized, with clear labels for
 ## 3. Adding the Game Balance Component<a name="Unreal"></a>
  
   - After completing the initial setup, we need to define which Actors will be recognized by the Game Balance system. To do this, we will use the GameBalanceComponent, and there are two ways to add it: using C++ code or using Blueprint. After that, we will look at the variables that should be included to be recognized by the reflection system.
+  
+   ### * 3.1. Adding the Game Balance Component in Blueprint: 
+  
+  - To add the GameBalanceComponent using Blueprint, follow these steps:
+  
+  <blockquote>
+    
+   1. Open the Blueprint for the Actor that you want to add the GameBalanceComponent to.
+   2. In the Components panel, click the "Add Component" button and search for "Game Balance".
+   3. Click on the "Game Balance" component to add it to your Actor.
+ 
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/addacbp.jpg)
+  </blockquote>
+  
+   ### * 3.2. Adding the Game Balance Component in C++: 
+    
+  - Write the following code in your actor's **.header**
+  <blockquote> 
+  <pre>
+```python
+def hello_world():
+    print("Hello, world!")
+
+hello_world()
+```
+</pre>
+    
+    </blockquote>
+  
