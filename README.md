@@ -108,16 +108,46 @@ It's important to keep the table consistent and organized, with clear labels for
   
    ### * 3.2. Adding the Game Balance Component in C++: 
     
-  - Write the following code in your actor's **.header**
+  - Write the following code in your actor's **.header**:
   <blockquote> 
   <pre>
-```python
-def hello_world():
-    print("Hello, world!")
-
-hello_world()
-```
-</pre>
+  
+  *private:*
+  UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = GameBalance, meta = (AllowPrivateAccess = "true"))
+	class UGameBalanceComponent* GameBalanceComponent;
+  
+  *public:*
+  FORCEINLINE class UGameBalanceComponent* GetGameBalance() const {return GameBalanceComponent; }
+  
+  UFUNCTION()
+  void UpdateValues();
+  </pre>
     
-    </blockquote>
+   - In the example above, we are instantiating the GameBalanceComponent in private. Then, with a FORCEINLINE, we create a getter function so that we can access it          from anywhere we want. We also create a function called UpdateValues(), which will be used later `(it is important to remember to put UFUNCTION on this function, as it will be called by a delegate)`.
+    
+  </blockquote>
+  
+  -  Write the following code in your actor's **.cpp**:
+  
+   <blockquote> 
+  <pre>
+  #include "../../Plugins/GameBalance/Source/GameBalance/Public/GameBalanceComponent.h"
+  
+  YourCostructor::YourConstructor()
+  {
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameBalanceComponent = CreateDefaultSubobject<UGameBalanceComponent>(TEXT("GameBalance"));
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddOwnedComponent(GameBalanceComponent);
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameBalanceComponent->OnUpdateValuesInContainer.AddDynamic(this, &AMyProjectCharacter::UpdateValues);
+  }
+  </pre>
+    
+   - In the example above, we are instantiating the GameBalanceComponent in private. Then, with a FORCEINLINE, we create a getter function so that we can access it          from anywhere we want. We also create a function called UpdateValues(), which will be used later `(it is important to remember to put UFUNCTION on this function, as it will be called by a delegate)`.
+    
+  </blockquote>
+     
+    ## 4. General rules about the Game Balance Component:
+     
+      - Here are some general rules about the Game Balance Component:
+     
+     
   
