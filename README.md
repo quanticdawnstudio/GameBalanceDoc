@@ -166,6 +166,8 @@ It's important to keep the table consistent and organized, with clear labels for
   
   
  </blockquote>
+	   
+## 5. Running the Game Balance:
  
      
      
