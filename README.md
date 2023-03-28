@@ -145,9 +145,16 @@ It's important to keep the table consistent and organized, with clear labels for
     
   </blockquote>
      
-    ## 4. General rules about the Game Balance Component:
+## 4. General rules about the Game Balance Component:
      
-      - Here are some general rules about the Game Balance Component:
+   - Here are some general rules about the Game Balance Component:
+<blockquote>   
+	
+  1.  Only variables with specific types can be modified by the Game Balance Component, including **integers**, **floats**, **booleans**, **names** and                   	**enumerations**.
+  
+  
+ </blockquote>
+ 
      
      
   
