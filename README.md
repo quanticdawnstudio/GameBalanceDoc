@@ -152,6 +152,9 @@ It's important to keep the table consistent and organized, with clear labels for
 	
   1. Only variables with specific types can be modified by the Game Balance Component, including **`integers`**, **`floats`**, **`booleans`**, **`names`** and               **`enumerations`**.
   2. Only variables that are marked as **`"UPROPERTY"`** in the class header file can be modified.
+  3. If a variable has a custom **`setter`** or **`getter`**, it will not be modified by the Game Balance Component.
+  4. The **`variables that are modified`** by the Game Balance Component must have the same name as the property in the .csv file.
+  5. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
   
   
  </blockquote>
