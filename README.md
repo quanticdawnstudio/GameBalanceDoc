@@ -121,7 +121,7 @@ It's important to keep the table consistent and organized, with clear labels for
   
   *private:*
   UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = GameBalance, meta = (AllowPrivateAccess = "true"))
-	class UGameBalanceComponent* GameBalanceComponent;
+  class UGameBalanceComponent* GameBalanceComponent;
   
   *public:*
   FORCEINLINE class UGameBalanceComponent* GetGameBalance() const {return GameBalanceComponent; }
@@ -138,9 +138,9 @@ It's important to keep the table consistent and organized, with clear labels for
   
    <blockquote> 
   <pre>
-  #include "../../Plugins/GameBalance/Source/GameBalance/Public/GameBalanceComponent.h"
+ #include "../../Plugins/GameBalance/Source/GameBalance/Public/GameBalanceComponent.h"
   
-  YourCostructor::YourConstructor()
+ YourCostructor::YourConstructor()
   {
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameBalanceComponent = CreateDefaultSubobject<UGameBalanceComponent>(TEXT("GameBalance"));
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddOwnedComponent(GameBalanceComponent);
@@ -161,8 +161,9 @@ It's important to keep the table consistent and organized, with clear labels for
   2. Only variables that are marked as **`"UPROPERTY"`** in the class header file can be modified.
   3. If a variable has a custom **`setter`** or **`getter`**, it will not be modified by the Game Balance Component.
   4. The **`variables that are modified`** by the Game Balance Component must have the same name as the property in the .csv file.
-  5. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
-  6. Cannot change a **float value** if it is created in **Blueprint**.
+  5. It's important to make sure that the **`Excel spreadsheet or .csv file is closed before running Game Balance.`** This is because Game Balance needs exclusive          access to the file in order to read the data and update the game variables in real-time. If the file is open in Excel or another program, it may be locked and          inaccessible to Game Balance, leading to errors or unexpected behavior. Therefore, it's best to close the file before launching Game Balance to ensure that it can      properly access and utilize the data in the file.
+  6. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
+  7. Cannot change a **float value** if it is created in **Blueprint**.
   
   
  </blockquote>
