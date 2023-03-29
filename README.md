@@ -2,31 +2,41 @@
 
   - This is the official documentation of the Game Balance plugin, an incredible plugin that can be used mainly to assist with balancing your game. With it, you can change all the values of your game in real-time through an Excel spreadsheet.
   
-  
+
  
  ## Table of Contents
 
   <blockquote>
   <ol dir="auto">
-  1 - <a href="#Init">How the Game Balance Plugin works</a>
-<ol dir="auto">
+  <li><a href="#Init">How the Game Balance Plugin works</a></li>  
+  <li><a href="#passoa">Step-by-step guide to Game Balance operation</a><br> 
+  2.1 - <a href="#passob">Creating and setting up the spreadsheet</a>  <br> 
+  2.2 - <a href="#passo1.2">Table formatting</a> <br> 
+  2.3 - <a href="#passo1.3">Configuring Game Balance Inside Unreal Engine</a> <br> 
+  <li> <a href="#passo2">Adding the Game Balance Component</a> <br> 
+  3.1 - <a href="#passo2.1">Adding the Game Balance Component in Blueprint</a>  <br> 
+  3.2 - <a href="#passo2.2">Adding the Game Balance Component in C++</a>  <br> 
+  <li> <a href="#passo3">General rules about the Game Balance Component</a> </li>  
+  <li> <a href="#passo4">Running the Game Balance</a> <br> 
+  
+
 <ol dir="auto">
 <ol dir="auto">
 
 </blockquote>
 
-
+ 
 
 
  ## 1. How it works<a name="Init"></a>
 
 -   Game Balance uses the reflection system of the Unreal Engine to find the actors and variables that should have their values changed in real-time from a .csv file created from an Excel spreadsheet. This is a complex system that uses the UnrealBuildTool and UnrealHeaderTool to perform the entire process. It's important to note that, by accessing the variables directly from the virtual memory, these values have no permanent effect. They only serve during the game session so that you can find the appropriate values and then change them with confidence that you have found the correct values.
 
- ## 2. Step-by-step guide to Game Balance operation:<a name="passo1"></a>
+ ## 2. Step-by-step guide to Game Balance operation:<a name="passoa"></a>
  
  -   For the perfect operation of GameBalance, it is necessary to pay attention to some steps. Follow each step carefully to be able to use GameBalance effectively.
  
-  ### * 2.1. Creating and setting up the spreadsheet:<a name="passo1.1"></a>
+  ### * 2.1. Creating and setting up the spreadsheet:<a name="passob"></a>
   -   Within the root of your project, create a folder named  **`Data`** and within it create an **`Excel`** file spreadsheet.
    <blockquote>
  
@@ -40,7 +50,7 @@
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/Captura%20de%20tela%202023-03-27%20122800.jpg)
   </blockquote>
   
-  ### * 2.2. Table formatting:
+  ### * 2.2. Table formatting<a name="passo1.2"></a>:
 
   -   Now let's talk about how the table should be arranged. Pay close attention, because if something is wrong here, GameBalance may not work correctly.
 The table should be organized with each row representing an item in the game, such as a character or weapon, and each column representing a different attribute or characteristic of that item.
@@ -74,7 +84,7 @@ It's important to keep the table consistent and organized, with clear labels for
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/Captura%20de%20tela%202023-03-27%20123029.jpg)
   </blockquote>
   
-  ### * 2.3. Configuring Game Balance Inside Unreal Engine: 
+  ### * 2.3. Configuring Game Balance Inside Unreal Engine:<a name="passo1.3"></a> 
       
   - After activating the Game Balance plugin, you will need to go to the Project Settings and search for "World Settings Class". Select the                               "GameBalanceWorldSettings" from the dropdown menu, and then restart the engine. This step is important because it ensures that the Game Balance logic is properly       integrated into the game world and that the updated values from the Game Balance table will be applied during gameplay.
    <blockquote>
@@ -89,11 +99,11 @@ It's important to keep the table consistent and organized, with clear labels for
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/TableName.jpg)
   </blockquote>
 
-## 3. Adding the Game Balance Component<a name="Unreal"></a>
+## 3. Adding the Game Balance Component<a name="passo2"></a>
  
   - After completing the initial setup, we need to define which Actors will be recognized by the Game Balance system. To do this, we will use the GameBalanceComponent, and there are two ways to add it: using C++ code or using Blueprint. After that, we will look at the variables that should be included to be recognized by the reflection system.
   
-   ### * 3.1. Adding the Game Balance Component in Blueprint: 
+   ### * 3.1. Adding the Game Balance Component in Blueprint:<a name="passo2.1"></a> 
   
   - To add the GameBalanceComponent using Blueprint, follow these steps:
   
@@ -106,7 +116,7 @@ It's important to keep the table consistent and organized, with clear labels for
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/addacbp.jpg)
   </blockquote>
   
-   ### * 3.2. Adding the Game Balance Component in C++: 
+   ### * 3.2. Adding the Game Balance Component in C++:<a name="passo2.2"></a> 
 	
   - Before anything else, we need to add the GameBalance to the list of modules inside the **`.Build.cs`** file of your project.
   <blockquote>
@@ -152,7 +162,7 @@ It's important to keep the table consistent and organized, with clear labels for
     
   </blockquote>
      
-## 4. General rules about the Game Balance Component:
+## 4. General rules about the Game Balance Component:<a name="passo3"></a>
      
    - Here are some general rules about the Game Balance Component:
 <blockquote>   
@@ -168,7 +178,7 @@ It's important to keep the table consistent and organized, with clear labels for
   
  </blockquote>
 	   
-## 5. Running the Game Balance:
+## 5. Running the Game Balance:<a name="passo4"></a>
  
      
      
