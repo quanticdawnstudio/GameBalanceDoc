@@ -167,19 +167,19 @@ It's important to keep the table consistent and organized, with clear labels for
    - Here are some general rules about the Game Balance Component:
 <blockquote>   
 	
-  1. Only variables with specific types can be modified by the Game Balance Component, including **`integers`**, **`floats`**, **`booleans`**, **`names`** and               **`enumerations`**.
+  1. Only variables with specific types can be modified by the Game Balance Component, including **`integers`**, **`floats`**, **`booleans`**, **`names`** and               **`UEnum`**.
   2. Only variables that are marked as **`"UPROPERTY"`** in the class header file can be modified.
   3. If a variable has a custom **`setter`** or **`getter`**, it will not be modified by the Game Balance Component.
   4. The **`variables that are modified`** by the Game Balance Component must have the same name as the property in the .csv file.
   5. It's important to make sure that the **`Excel spreadsheet or .csv file is closed before running Game Balance.`** This is because Game Balance needs exclusive          access to the file in order to read the data and update the game variables in real-time. If the file is open in Excel or another program, it may be locked and          inaccessible to Game Balance, leading to errors or unexpected behavior. Therefore, it's best to close the file before launching Game Balance to ensure that it can      properly access and utilize the data in the file.
   6. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
-  7. Cannot change a **float value** if it is created in **Blueprint**.
-  
+  7. "It is not possible to change **`float`** and **`enum`** values through blueprints."
   
  </blockquote>
 	   
 ## 5. Running the Game Balance:<a name="passo4"></a>
  
+  -  Now that we know everything about Game Balance, it's time to put our knowledge into practice. To do so, I'm going to create a test project to demonstrate all the      variables and peculiarities of Game Balance in practice.
      
      
   
