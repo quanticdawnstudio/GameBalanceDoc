@@ -246,7 +246,24 @@ It's important to keep the table consistent and organized, with clear labels for
 	  
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/TableName.jpg)
 
-</blockquote>
+  </blockquote>
+
+ - Just to make it easier for demonstration, I created a WBP to make all the changes we will make visible.
+  <blockquote>
+	 
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/image.jpg)
+
+  </blockquote>
+	   
+ - Now you just need to hit play on your project and press the **`Game Balance Execute button`**.
+  <blockquote>
+	
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/Game%20Balance%20Button.jpg)
+ 
+If for some reason it's not showing up in the location indicated above, it can be found in the location indicated below:
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/GBInWindows.jpg)
+
+  </blockquote>
  
    
    
