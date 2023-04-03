@@ -174,12 +174,35 @@ It's important to keep the table consistent and organized, with clear labels for
   5. It's important to make sure that the **`Excel spreadsheet or .csv file is closed before running Game Balance.`** This is because Game Balance needs exclusive          access to the file in order to read the data and update the game variables in real-time. If the file is open in Excel or another program, it may be locked and          inaccessible to Game Balance, leading to errors or unexpected behavior. Therefore, it's best to close the file before launching Game Balance to ensure that it can      properly access and utilize the data in the file.
   6. The actor that contains the variables must have a **GameBalanceComponent** **`attached to it`**.
   7. "It is not possible to change **`float`** and **`enum`** values through blueprints."
-  
  </blockquote>
+ 
+ ### *4.1. Understanding the UpdateValues and what it is used for
+ 
+  - The UpdateValues function is called whenever we execute the Game Balance, and it serves two purposes:
+  
+   1. Internal variables of external components can only be updated through an accessory variable, for example: the MaxWalkSpeed variable is inside the                     CharacterMovement component, so in order to update it we need to create another variable, which was the 'Speed' float that we created in earlier sections, and         then we will do the following in this case:
 	   
 ## 5. Running the Game Balance:<a name="passo4"></a>
  
   -  Now that we know everything about Game Balance, it's time to put our knowledge into practice. To do so, I'm going to create a test project to demonstrate all the      variables and peculiarities of Game Balance in practice.
+  
+  ### 5.1. Creating the variables in practice
+  
+   - Firstly, I created a variable of each type supported by Game Balance, taking into account the limitations as shown below:<br> 
+    **a** -  I created a **`bool`** type variable, a **`Name`** type variable, and an **`int`** type variable in BP, as they are compatible with creation in BP but can              also be created in C++.
+  <blockquote>
+    
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/variables%20bp.jpg)
+  </blockquote>
+ 
+      **b** - In C++, I created two float type variables and a UEnum that will contain only 3 information, that of Red, Black, and Green."
+      
+  <blockquote>
+    
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/c%2B%2B%20%20variables.jpg)
+  
+  **`IMPORTANT: Remember that float type and UEnum variables are only captured by Game Balance if they are created in C++ and have the UPROPERTY() ecification."`**
+  </blockquote>
      
      
   
