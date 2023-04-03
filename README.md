@@ -196,8 +196,9 @@ It's important to keep the table consistent and organized, with clear labels for
    2 - Then, inside UpdateValues, you will use the following code: <br>
     
   <pre>
-     YourEnum = GetGameBalance()->UpdateEnumProperties<EYourEnum, AYourActorClass>(YourEnum, this)
+   <b>YourEnum</b> = GetGameBalance()-&gt;UpdateEnumProperties&lt;EYourEnum, AYourActorClass&gt;(YourEnum, this)
   </pre>
+
    In the end, it will look something like this:
     
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/UpdateValues%20Completo.png)
@@ -225,5 +226,7 @@ It's important to keep the table consistent and organized, with clear labels for
   **`IMPORTANT: Remember that float type and UEnum variables are only captured by Game Balance if they are created in C++ and have the UPROPERTY() ecification."`**
   </blockquote>
      
-     
+
+
+
   
