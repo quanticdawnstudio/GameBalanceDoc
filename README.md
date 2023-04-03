@@ -264,6 +264,20 @@ If for some reason it's not showing up in the location indicated above, it can b
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/GBInWindows.jpg)
 
   </blockquote>
+
+  - If everything goes well, when you press the button a success message will be displayed.
+  <blockquote>
+	 
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/sucesso.jpg)
+
+  </blockquote>
+
+   - Otherwise, an error message will be displayed and it will mention one of the possible errors that we have already considered in this documentation.
+   <blockquote>
+ 
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/error%20mensage.jpg)
+
+  </blockquote>
  
    
    
