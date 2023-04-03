@@ -203,6 +203,12 @@ It's important to keep the table consistent and organized, with clear labels for
     
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/UpdateValues%20Completo.png)
   </blockquote>
+    3 - You can also use UpdateValues in BP, in this case, you will access the Update directly from the component that will be called OnUpdateValuesInContainer. It             will be accessible by clicking on the component in the BP, within Events in the component details. 
+<blockquote>
+  
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/UpdateValuesBP.jpg)
+	Of course, by using BP, you will not be able to request an update for any UEnum.
+ </blockquote>
 	   
 ## 5. Running the Game Balance:<a name="passo4"></a>
  
