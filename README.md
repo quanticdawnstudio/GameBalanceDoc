@@ -231,6 +231,27 @@ It's important to keep the table consistent and organized, with clear labels for
   
   **`IMPORTANT: Remember that float type and UEnum variables are only captured by Game Balance if they are created in C++ and have the UPROPERTY() ecification."`**
   </blockquote>
+	   
+ ### 5.2. Playing the GameBalance.
+- Before we play, we must make sure of some things we have already discussed above, such as:
+  <blockquote>
+   1 - We have updated the information in our spreadsheet. <br>   
+	  
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/planilha%20atualizada.jpg)   
+   I'll show you how it looks now just so there's no doubt about how the spreadsheet should be filled out.
+	  
+  2 - That our .csv file is **`CLOSED`** and has been created through **`EXCEL`**.
+	  
+  3 - The correct name of our .csv file is filled in the TableName field of the WorldSettings.
+	  
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/TableName.jpg)
+
+</blockquote>
+ 
+   
+   
+
+
      
 
 
