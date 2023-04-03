@@ -181,6 +181,27 @@ It's important to keep the table consistent and organized, with clear labels for
   - The UpdateValues function is called whenever we execute the Game Balance, and it serves two purposes:
   
    1. Internal variables of external components can only be updated through an accessory variable, for example: the MaxWalkSpeed variable is inside the                     CharacterMovement component, so in order to update it we need to create another variable, which was the 'Speed' float that we created in earlier sections, and         then we will do the following in this case:
+   <blockquote>
+    
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/MaxValue.jpg)
+  </blockquote>
+  
+  #### *4.1.1. Using UEnum in Game Balance.
+   - UEnum variables have their own template for being updated, as they are more complex than other variables, since each UEnum is handled differently. To update a          UEnum, we will also need the UpdateValues function of GameBalance.
+   <blockquote>
+    1 - First, you will create your UEnum normally, remembering that in order to work, it must have the specifier UPROPERTY(). <br>
+    
+  ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/soenum.jpg)
+    
+   2 - Then, inside UpdateValues, you will use the following code: <br>
+    
+  <pre>
+     YourEnum = GetGameBalance()->UpdateEnumProperties<EYourEnum, AYourActorClass>(YourEnum, this)
+  </pre>
+   In the end, it will look something like this:
+    
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/UpdateValues%20Completo.png)
+  </blockquote>
 	   
 ## 5. Running the Game Balance:<a name="passo4"></a>
  
@@ -195,7 +216,7 @@ It's important to keep the table consistent and organized, with clear labels for
   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/raw/main/Ima/variables%20bp.jpg)
   </blockquote>
  
-      **b** - In C++, I created two float type variables and a UEnum that will contain only 3 information, that of Red, Black, and Green."
+   **b** - In C++, I created two float type variables and a UEnum that will contain only 3 information, that of Red, Black, and Green."
       
   <blockquote>
     
