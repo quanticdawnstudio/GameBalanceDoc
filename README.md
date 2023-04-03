@@ -278,6 +278,22 @@ If for some reason it's not showing up in the location indicated above, it can b
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/error%20mensage.jpg)
 
   </blockquote>
+	   
+### 5.3. Cool things about Game Balance:
+  - I prepared a gif that shows the Game Balance in action.
+  <blockquote>
+	 
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/ok.gif)
+
+  </blockquote>
+	   
+   - One cool thing about Game Balance is that you don't need to stop the game to change the values in the table. Check out the gif below to see how I change the            values in the table and then update them without needing to end the session.
+  <blockquote>
+	
+	Notice that I put a wrong value in the CheckBox variable, and Game Balance simply ignores it without presenting any errors.
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/completo.gif)
+
+  </blockquote>
  
    
    
