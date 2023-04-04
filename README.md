@@ -16,8 +16,13 @@
   <li> <a href="#passo2">Adding the Game Balance Component</a> <br> 
   3.1 - <a href="#passo2.1">Adding the Game Balance Component in Blueprint</a>  <br> 
   3.2 - <a href="#passo2.2">Adding the Game Balance Component in C++</a>  <br> 
-  <li> <a href="#passo3">General rules about the Game Balance Component</a> </li>  
-  <li> <a href="#passo4">Running the Game Balance</a> <br> 
+  <li> <a href="#passo3">General rules about the Game Balance Component</a>  <br> 
+  4.1 - <a href="#passo3.1">Understanding the UpdateValues and what it is used for</a> <br>	  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1.1 - <a href="#passo3.1.1">Using UEnum in Game Balance</a> <br>
+  <li><a href="#passo4">Running the Game Balance</a> <br>
+  5.1 - <a href="#passo4.1">Creating the variables in practice</a> <br>
+  5.2 - <a href="#passo4.2">Playing the GameBalance</a> <br>
+  5.3 - <a href="#passo4.3">Cool things about Game Balance</a> </li>
   
 
 <ol dir="auto">
@@ -177,7 +182,7 @@ It's important to keep the table consistent and organized, with clear labels for
   7. "It is not possible to change **`float`** and **`enum`** values through blueprints."
  </blockquote>
  
- ### *4.1. Understanding the UpdateValues and what it is used for
+ ### *4.1. Understanding the UpdateValues and what it is used for<a name="passo3.1"></a>
  
   - The UpdateValues function is called whenever we execute the Game Balance, and it serves two purposes:
   
@@ -187,7 +192,7 @@ It's important to keep the table consistent and organized, with clear labels for
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/MaxValue.jpg)
   </blockquote>
   
-  #### *4.1.1. Using UEnum in Game Balance.
+  #### *4.1.1. Using UEnum in Game Balance.<a name="passo3.1.1"></a>
    - UEnum variables have their own template for being updated, as they are more complex than other variables, since each UEnum is handled differently. To update a          UEnum, we will also need the UpdateValues function of GameBalance.
    <blockquote>
     1 - First, you will create your UEnum normally, remembering that in order to work, it must have the specifier UPROPERTY(). <br>
@@ -215,7 +220,7 @@ It's important to keep the table consistent and organized, with clear labels for
  
   -  Now that we know everything about Game Balance, it's time to put our knowledge into practice. To do so, I'm going to create a test project to demonstrate all the      variables and peculiarities of Game Balance in practice.
   
-  ### 5.1. Creating the variables in practice
+  ### 5.1. Creating the variables in practice<a name="passo4.1"></a>
   
    - Firstly, I created a variable of each type supported by Game Balance, taking into account the limitations as shown below:<br> 
     **a** -  I created a **`bool`** type variable, a **`Name`** type variable, and an **`int`** type variable in BP, as they are compatible with creation in BP but can              also be created in C++.
@@ -233,7 +238,7 @@ It's important to keep the table consistent and organized, with clear labels for
   **`IMPORTANT: Remember that float type and UEnum variables are only captured by Game Balance if they are created in C++ and have the UPROPERTY() ecification."`**
   </blockquote>
 	   
- ### 5.2. Playing the GameBalance.
+ ### 5.2. Playing the GameBalance.<a name="passo4.2"></a>
 - Before we play, we must make sure of some things we have already discussed above, such as:
   <blockquote>
    1 - We have updated the information in our spreadsheet. <br>   
@@ -280,7 +285,7 @@ If for some reason it's not showing up in the location indicated above, it can b
 
   </blockquote>
 	   
-### 5.3. Cool things about Game Balance:
+### 5.3. Cool things about Game Balance:<a name="passo4.3"></a>
   - I prepared a gif that shows the Game Balance in action.
   <blockquote>
 	 
