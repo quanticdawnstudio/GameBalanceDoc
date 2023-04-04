@@ -291,7 +291,16 @@ If for some reason it's not showing up in the location indicated above, it can b
   <blockquote>
 	
 	Notice that I put a wrong value in the CheckBox variable, and Game Balance simply ignores it without presenting any errors.
+	
    ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/completo.gif)
+
+  </blockquote>
+  
+   - Now let's see a situation where an error message may appear, which in the case below, is when I pass the name of a non-existent worksheet.
+   
+   <blockquote>
+	
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/error.gif)
 
   </blockquote>
  
