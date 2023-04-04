@@ -127,18 +127,18 @@ It's important to keep the table consistent and organized, with clear labels for
     
   - Write the following code in your actor's **.header**:
   <blockquote> 
-  <pre>
-  
-  *private:*
+	  
+  ```ruby
+  private:
   UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = GameBalance, meta = (AllowPrivateAccess = "true"))
   class UGameBalanceComponent* GameBalanceComponent;
   
-  *public:*
+  public:
   FORCEINLINE class UGameBalanceComponent* GetGameBalance() const {return GameBalanceComponent; }
   
   UFUNCTION()
   void UpdateValues();
-  </pre>
+  ```
     
    - In the example above, we are instantiating the GameBalanceComponent in private. Then, with a FORCEINLINE, we create a getter function so that we can access it          from anywhere we want. We also create a function called UpdateValues(), which will be used later `(it is important to remember to put UFUNCTION on this function, as it will be called by a delegate)`.
     
@@ -147,16 +147,17 @@ It's important to keep the table consistent and organized, with clear labels for
   -  Write the following code in your actor's **.cpp**:
   
    <blockquote> 
-  <pre>
+	   
+```ruby   
  #include "../../Plugins/GameBalance/Source/GameBalance/Public/GameBalanceComponent.h"
   
  YourCostructor::YourConstructor()
   {
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameBalanceComponent = CreateDefaultSubobject<UGameBalanceComponent>(TEXT("GameBalance"));
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddOwnedComponent(GameBalanceComponent);
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameBalanceComponent->OnUpdateValuesInContainer.AddDynamic(this, &AMyProjectCharacter::UpdateValues);
-  }
-  </pre>
+     GameBalanceComponent = CreateDefaultSubobject<UGameBalanceComponent>(TEXT("GameBalance"));
+     AddOwnedComponent(GameBalanceComponent);
+     GameBalanceComponent->OnUpdateValuesInContainer.AddDynamic(this, &AMyProjectCharacter::UpdateValues);
+  }   
+ ```
     
    - In the example above, we are instantiating the GameBalanceComponent in private. Then, with a FORCEINLINE, we create a getter function so that we can access it          from anywhere we want. We also create a function called UpdateValues(), which will be used later `(it is important to remember to put UFUNCTION on this function, as it will be called by a delegate)`.
     
@@ -195,9 +196,9 @@ It's important to keep the table consistent and organized, with clear labels for
     
    2 - Then, inside UpdateValues, you will use the following code: <br>
     
-  <pre>
-   <b>YourEnum</b> = GetGameBalance()-&gt;UpdateEnumProperties&lt;EYourEnum, AYourActorClass&gt;(YourEnum, this)
-  </pre>
+ ```ruby	   
+   YourEnum = GetGameBalance()->UpdateEnumProperties<EYourEnum, AYourActorClass>(YourEnum, this)   
+  ```
 
    In the end, it will look something like this:
     
