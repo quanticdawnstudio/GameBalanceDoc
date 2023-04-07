@@ -154,7 +154,7 @@ It's important to keep the table consistent and organized, with clear labels for
    <blockquote> 
 	   
 ```ruby   
- #include "../../Plugins/GameBalance/Source/GameBalance/Public/GameBalanceComponent.h"
+ #include "GameBalanceComponent.h"
   
  YourCostructor::YourConstructor()
   {
